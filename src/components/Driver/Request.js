@@ -4,8 +4,8 @@ const Request = ({start, destination, amount}) => {
     return (
         <div className='request'>
             <div>
-                <p>Start : </p> 
-                <p> End : </p>
+                <p>Start : {start[0]}, {start[1]} </p> 
+                <p> End : {destination[0]}, {destination[1]}</p>
                 <p>Fee : {amount} Eth</p>
             </div>
 
