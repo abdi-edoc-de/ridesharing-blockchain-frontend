@@ -1,4 +1,3 @@
-import DriverInfo from "./DriverInfo"
 import UpdateBox  from "./UpdateBox"
 
 const UserSideBar = () => {
@@ -7,8 +6,6 @@ const UserSideBar = () => {
             <h3>Balance : 2 eth</h3>
             <UpdateBox title='Withdraw'/>
             <UpdateBox title='Deposit'/>
-
-            <DriverInfo />
         </div>
     )
 }

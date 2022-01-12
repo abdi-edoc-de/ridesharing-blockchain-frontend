@@ -5,11 +5,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
 .header {
     display: flex;
     background-color: #1C2D83;
     color: #ffffff;
-    margin: -10px -10px 5px -10px;
+    margin: 0 0 5px 0;
     padding: 100px;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +42,8 @@
     flex-direction:column;
     justify-content: flex-start;
     align-items: center;
-    height: 86vh;
+    height: 85vh;
+    overflow-y: hidden;
     border-radius: 10px;
 }
 
@@ -72,21 +78,20 @@
 }
 
 .requests{
-    border: 1px #1C2D83 solid;
+    /* border: 1px #1C2D83 solid; */
     border-radius: 10px;
     width: 80%;
-    padding: 5px 15px;
-    margin: 20px 0;
-    height: 70vh;
+    padding: 5px 100px;
+    margin: 20px 100px;
+    height: 85vh;
     overflow-y: scroll;
 }
 
 .request {
-    
     border: 1px #1C2D83 solid;
     border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 0px 35px;
+    margin: 35px 35px;
     display : flex;
     flex-direction : column;
     justify-content : space-between
@@ -101,5 +106,11 @@
 .link{
     color: #ffffff;
     font-size: 1rem;
+    text-decoration: none;
+}
+
+.type-of-user{
+    color: #C4C4C4;
+    font-size: 1.25rem;
     text-decoration: none;
 }
