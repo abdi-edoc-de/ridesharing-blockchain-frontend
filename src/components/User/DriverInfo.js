@@ -1,4 +1,3 @@
-import Button from '../Common/Button'
 
 const DriverInfo = ({seat, plate, lat, long, id, sendRequest}) => {
     return (

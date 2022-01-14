@@ -20,3 +20,8 @@ export const saveDriversInfo = async (driverLocation, driverAddress, seatNumber,
     /// call the api and send the data, carPlate, seatNumber, driverAddress, driverLocation
     console.log(driverLocation, driverAddress, seatNumber, carPlate)
   }
+
+
+  export const depositAmount = (amount) => {
+      console.log("Deposited amount" + amount);
+  }
