@@ -32,12 +32,12 @@ const MyInfo = ({ carPlate, seatNumber, setCarPlate, setSeatNumber, driverAddres
             <div className="update-box">
                 <p> Seats </p>
                 <div style={{"width" : "1vw"}} />
-                <input type="number" className="input" value={address} onChange={(e) => {setAddress(e.target.value)} }/>
+                <input type="number" className="input" value={seat} onChange={(e) => {setSeat(e.target.value)} }/>
             </div>
             <div className="update-box">
                 <p> Ethereum Address </p>
                 <div style={{"width" : "1vw"}} />
-                <input type="number" className="input" value={seat} onChange={(e) => {setSeat(e.target.value)} }/>
+                <input type="text" className="input" value={address} onChange={(e) => {setAddress(e.target.value)} }/>
             </div>
             <div style={{"display" : 'flex', "justifyContent" : 'center'}}>
                 <input type="submit" className='btn' onClick={() => {submit()}}/>

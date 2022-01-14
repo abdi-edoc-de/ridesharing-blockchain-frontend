@@ -42,7 +42,7 @@ body {
     flex-direction:column;
     justify-content: flex-start;
     align-items: center;
-    height: 85vh;
+    height: 89vh;
     overflow-y: hidden;
     border-radius: 10px;
 }
@@ -74,14 +74,13 @@ body {
     border-radius: 10px;
     width: 80%;
     padding: 5px 15px;
-    margin: 20px auto;
+    margin: 5px auto;
 }
 
 .requests{
-    /* border: 1px #1C2D83 solid; */
     border-radius: 10px;
     width: 90%;
-    margin: 5px 10px;
+    margin: 0 10px;
     height: 85vh;
     overflow-y: scroll;
 }
@@ -89,8 +88,8 @@ body {
 .request {
     border: 1px #1C2D83 solid;
     border-radius: 10px;
-    padding: 0px 35px;
-    margin: 35px 35px;
+    padding: 0px 20px;
+    margin: 10px 0;
     display : flex;
     flex-direction : column;
     justify-content : space-between

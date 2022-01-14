@@ -11,7 +11,7 @@ const Request = ({start, destination, amount}) => {
 
             <p>
                 <Button title='Accept' />
-                <span style={{"padding" : "4px"}}/>
+                <span style={{"padding" : "2px"}}/>
                 <Button title='Decline' />
             </p>
         </div>
