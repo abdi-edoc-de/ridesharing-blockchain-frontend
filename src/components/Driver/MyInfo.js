@@ -1,14 +1,36 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-const MyInfo = ({ carPlate, seatNumber, setCarPlate, setSeatNumber, driverAddress, setDriverAddress }) => {
+const MyInfo = ({ carPlate, seatNumber, setCarPlate, setSeatNumber, driverAddress, setDriverAddress, saveDriversInfo }) => {
     const [plate, setPlate] = useState(0)
     const [seat, setSeat] = useState(0)
     const [address, setAddress] = useState(0);
+    const [location, setLocation] = useState([]);
+
+
+    useEffect(()=>{
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+          };
+          
+          function success(pos) {
+            setLocation(pos.coords)
+          }
+          
+          function error(err) {
+            console.warn(`ERROR(${err.code}): ${err.message}`);
+          }
+          
+          navigator.geolocation.getCurrentPosition(success, error, options);
+    }, [])
 
     const submit = () => {
         setCarPlate(plate)
         setSeatNumber(seat)
         setDriverAddress(address)
+
+        saveDriversInfo(location, address, seat, plate)
     }
 
     return (

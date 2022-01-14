@@ -26,6 +26,7 @@ const App = () => {
     alert("Request Sent to " + address)
   }
 
+
   useEffect(() => {
     getDrivers();
     getRequests();
@@ -37,7 +38,7 @@ const App = () => {
         <Router >
           <Routes>
             <Route path="/" element={<User drivers={drivers} sendRequest={sendRequest} />}/>
-            <Route path="/driver" element={< Driver requests={requests} carPlate={carPlate} seatNumber={seatNumber} setCarPlate={setCarPlate}  address={driverAddress} setSeatNumber={setSeatNumber} setDriverAddress={setDriverAddress} />}/>
+            <Route path="/driver" element={< Driver requests={requests} carPlate={carPlate} seatNumber={seatNumber} setCarPlate={setCarPlate}  address={driverAddress} setSeatNumber={setSeatNumber} setDriverAddress={setDriverAddress} saveDriversInfo={apiCalls.saveDriversInfo} />}/>
           </Routes>
         </Router>
       </div>

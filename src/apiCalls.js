@@ -14,3 +14,9 @@ export const fetchRequests = async () => {
     ]
     // return []
 }
+
+
+export const saveDriversInfo = async (driverLocation, driverAddress, seatNumber, carPlate) => {
+    /// call the api and send the data, carPlate, seatNumber, driverAddress, driverLocation
+    console.log(driverLocation, driverAddress, seatNumber, carPlate)
+  }
