@@ -11,6 +11,7 @@ const App = () => {
   const [carPlate, setCarPlate] = useState(0)
   const [seatNumber, setSeatNumber] = useState(0)
   const [driverAddress, setDriverAddress] = useState(0)
+  const [selectedDriver, setSelectedDriver] = useState([])
 
   const getDrivers =   async () => {
     const data = await apiCalls.fetchDrivers();
@@ -36,8 +37,8 @@ const App = () => {
       <div>
         <Router >
           <Routes>
-            <Route path="/" element={<User drivers={drivers} sendRequest={sendRequest} depositAmount={apiCalls.depositAmount} />}/>
-            <Route path="/driver" element={< Driver requests={requests} carPlate={carPlate} seatNumber={seatNumber} setCarPlate={setCarPlate}  address={driverAddress} setSeatNumber={setSeatNumber} setDriverAddress={setDriverAddress} saveDriversInfo={apiCalls.saveDriversInfo} />}/>
+            <Route path="/" element={<User drivers={drivers} sendRequest={sendRequest} depositAmount={apiCalls.depositAmount} selectedDriver={selectedDriver} setSelectedDriver={setSelectedDriver} pay={apiCalls.pay} />}/>
+            <Route path="/driver" element={< Driver requests={requests} requestAccepted={apiCalls.requestAccepted} carPlate={carPlate} seatNumber={seatNumber} setCarPlate={setCarPlate}  address={driverAddress} setSeatNumber={setSeatNumber} setDriverAddress={setDriverAddress} saveDriversInfo={apiCalls.saveDriversInfo} />}/>
           </Routes>
         </Router>
       </div>

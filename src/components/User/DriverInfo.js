@@ -1,5 +1,5 @@
 
-const DriverInfo = ({seat, plate, lat, long, id, sendRequest}) => {
+const DriverInfo = ({seat, plate, lat, long, id, sendRequest, setSelectedDriver, setShowDrivers}) => {
     return (
         <div className="driver-info">
             <div style={{"display" : 'flex', "flexDirection" : "column", "justifyContent" : 'center'}}>
@@ -14,6 +14,8 @@ const DriverInfo = ({seat, plate, lat, long, id, sendRequest}) => {
 
             <button className='btn' style={{"width":"100%"}} onClick={()=>{
                 sendRequest(id)
+                setSelectedDriver({seat, plate, lat, long, id})
+                setShowDrivers(false)
             }}>Send Request</button>
         </div>
     )

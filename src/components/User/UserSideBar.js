@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import DriversList from './DriversList'
-const UserSideBar = ({ drivers, sendRequest, depositAmount }) => {
+import CurrentTrip from './CurrentTrip'
+
+const UserSideBar = ({ drivers, sendRequest, depositAmount, selectedDriver, setSelectedDriver, pay }) => {
     const [amount, setAmount] = useState(0)
+    const [showDrivers, setShowDrivers] = useState(true)
+    console.log(drivers);
     return (
         <div className="side-bar">
             <div className="update-box">
@@ -19,7 +23,12 @@ const UserSideBar = ({ drivers, sendRequest, depositAmount }) => {
                 </div>
 
             </div>
-            <DriversList drivers={drivers} sendRequest={sendRequest} />
+            {
+                showDrivers || drivers.length === 0?  
+                <DriversList drivers={drivers} sendRequest={sendRequest} setSelectedDriver={setSelectedDriver} setShowDrivers={setShowDrivers}/> : 
+                <CurrentTrip selectedDriver={selectedDriver} pay={pay} setShowDrivers={setShowDrivers}/>
+            
+            }
         </div>
     )
 }
