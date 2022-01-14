@@ -1,15 +1,15 @@
-import DriversList from './DriversList'
+import Map from '../Common/Map'
 import UserSideBar from './UserSideBar'
 import Header from './Header'
 
 
-const User = ({ drivers }) => {
+const User = ({ drivers, sendRequest }) => {
     return (
         <>
             <Header />
             <div className='container'>
-            <DriversList drivers={drivers} />
-                <UserSideBar />
+                <Map/>
+            <UserSideBar drivers={drivers} sendRequest={sendRequest} />
             </div>
         </>
     )
